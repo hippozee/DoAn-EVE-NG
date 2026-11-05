@@ -1,0 +1,33 @@
+Building configuration...
+
+Current configuration:
+!
+frr version 8.4.4
+frr defaults traditional
+hostname localhost
+log syslog informational
+no ipv6 forwarding
+service integrated-vtysh-config
+!
+interface ens3
+ ip ospf area 0
+ ip ospf passive
+exit
+!
+interface ens4
+ ip ospf area 0
+ ip ospf cost 10
+ ip ospf network point-to-point
+exit
+!
+interface ens6
+ ip ospf area 0
+ ip ospf cost 10
+ ip ospf network point-to-point
+exit
+!
+router ospf
+ ospf router-id 10.255.0.1
+exit
+!
+end

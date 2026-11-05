@@ -1,0 +1,41 @@
+
+=== INTERFACES ===
+lo               UNKNOWN        127.0.0.1/8 ::1/128
+ens3             UP             10.10.10.1/24 fe80::250:ff:fe00:200/64
+ens4             UP             10.255.1.1/30 fe80::250:ff:fe00:201/64
+ens5             DOWN
+ens6             UP             10.255.2.1/30 fe80::250:ff:fe00:203/64
+ens7             DOWN
+=== LINUX ROUTING ===
+10.10.10.0/24 dev ens3 proto kernel scope link src 10.10.10.1
+10.10.20.0/24 nhid 20 via 10.255.1.2 dev ens4 proto ospf metric 20
+10.10.30.0/24 nhid 24 via 10.255.2.2 dev ens6 proto ospf metric 20
+10.200.12.0/30 nhid 25 proto ospf metric 20
+        nexthop via 10.255.1.2 dev ens4 weight 1
+        nexthop via 10.255.2.2 dev ens6 weight 1
+10.255.1.0/30 dev ens4 proto kernel scope link src 10.255.1.1
+10.255.2.0/30 dev ens6 proto kernel scope link src 10.255.2.1
+=== OSPF NEIGHBORS ===
+
+Neighbor ID     Pri State           Up Time         Dead Time Address         Interface                        RXmtL RqstL DBsmL
+10.255.0.2        1 Full/-          17m08s            30.390s 10.255.1.2      ens4:10.255.1.1                      0     0     0
+10.255.0.3        1 Full/-          17m08s            31.071s 10.255.2.2      ens6:10.255.2.1                      0     0     0
+
+=== FRR ROUTING ===
+Codes: K - kernel route, C - connected, S - static, R - RIP,
+       O - OSPF, I - IS-IS, B - BGP, E - EIGRP, N - NHRP,
+       T - Table, v - VNC, V - VNC-Direct, A - Babel, F - PBR,
+       f - OpenFabric,
+       > - selected route, * - FIB route, q - queued, r - rejected, b - backup
+       t - trapped, o - offload failure
+
+O   10.10.10.0/24 [110/1] is directly connected, ens3, weight 1, 00:17:19
+C>* 10.10.10.0/24 is directly connected, ens3, 00:17:19
+O>* 10.10.20.0/24 [110/11] via 10.255.1.2, ens4, weight 1, 00:17:06
+O>* 10.10.30.0/24 [110/11] via 10.255.2.2, ens6, weight 1, 00:17:06
+O>* 10.200.12.0/30 [110/15] via 10.255.1.2, ens4, weight 1, 00:16:53
+  *                         via 10.255.2.2, ens6, weight 1, 00:16:53
+O   10.255.1.0/30 [110/10] is directly connected, ens4, weight 1, 00:17:19
+C>* 10.255.1.0/30 is directly connected, ens4, 00:17:19
+O   10.255.2.0/30 [110/10] is directly connected, ens6, weight 1, 00:17:19
+C>* 10.255.2.0/30 is directly connected, ens6, 00:17:19
