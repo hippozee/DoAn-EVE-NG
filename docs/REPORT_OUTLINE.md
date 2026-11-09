@@ -54,10 +54,10 @@ Hình cần có: topology thật, sơ đồ logic, sơ đồ luồng dữ liệu
 3. OSPF và kiểm tra neighbor/route bằng lệnh trong TEST_PLAN.
 4. WireGuard và kiểm tra handshake/counters đã che thông tin khóa.
 5. Firewall/QoS: chỉ trình bày rule/class đã có bản xuất và kiểm thử.
-6. Zabbix 7.0.31, ICMP Ping template cho ba router, ánh xạ item ID.
+6. Zabbix API/server ban đầu 7.0.31, frontend sau cài sender hiển thị 7.0.32; ghi phiên bản từng thành phần theo ảnh. ICMP Ping template cho ba router, ánh xạ item ID.
 7. Python venv, requests/NumPy/scikit-learn, ai_check.py và credentials cục bộ không nhúng vào tài liệu.
 8. systemd oneshot/timer và nhật ký tự chạy.
-9. Publisher ai.report và widget: tại mốc 09/11 đang sửa Last value trống; cập nhật sau khi xác nhận.
+9. Publisher ai.report dùng zabbix_sender nguồn/đích 127.0.0.1 và widget Item history trên dashboard riêng AI Network Analysis đã hiển thị báo cáo thật. Ghi lỗi Allowed hosts của bản history.push là vấn đề triển khai đã chuyển đường gửi, không suy ra đã sửa nguyên nhân gốc.
 
 Ảnh terminal cần cắt gọn phần có ý nghĩa, chú thích node/lệnh/thời gian. Không dùng ảnh chỉ có lệnh đã gõ để chứng minh kết quả.
 

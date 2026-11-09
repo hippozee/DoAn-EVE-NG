@@ -34,7 +34,10 @@ Các ảnh dưới đây chưa được sao chép vào repo. Mã E là mã chỉ
 | E07 | ai_check.py chạy không hỏi mật khẩu, in số mẫu dưới 30 | Đọc dữ liệu tự động được; chưa chứng minh mô hình đã học |
 | E08 | Journal có nhiều lần Starting/Finished, đầu ra từng host | Có chạy định kỳ thành công ở mức tiến trình |
 | E09 | Latest data có Network AI report; người dùng nói Last value trống | Item tồn tại; chưa nghiệm thu ingest dữ liệu |
-| E10 | Chưa có | Cần report nhận giá trị, mô hình đủ mẫu, widget, lỗi/phục hồi |
+| E10 | Journal lỗi Allowed hosts của history.push | Đã xác định nhóm lỗi; chưa xác định chính xác IP nguồn frontend |
+| E11 | Sender thử và publisher thật đều processed: 1; failed: 0 | Đường gửi mới buộc nguồn/đích 127.0.0.1 hoạt động |
+| E12 | Dashboard AI Network Analysis có report 17:22:44 với HQ 64, BR1 67, BR2 66 mẫu và score | Đã đủ mẫu, suy luận và hiển thị báo cáo thật; chưa chứng minh độ chính xác |
+| E13 | Global view hiển thị server 7.0.31, frontend 7.0.32 sau cài sender | Phải phân biệt phiên bản thành phần; không mặc định server đã chạy 7.0.32 |
 
 Không biến các dòng log Finished thành bằng chứng độ chính xác AI; chương trình có nhánh bắt lỗi vẫn có thể thoát mã 0.
 
@@ -45,7 +48,7 @@ Không biến các dòng log Finished thành bằng chứng độ chính xác AI
 - Firewall/QoS đã che thông tin nhạy cảm, kèm test từ đúng LAN.
 - Mã AI thật từ VM, requirements và units thực tế, không kèm credentials/venv.
 - Export cấu hình Zabbix đã loại bí mật; bảng item và lịch sử có timestamp.
-- Báo cáo ai.report có nội dung, ảnh widget và nhật ký gửi thành công.
+- Thu lại đúng ảnh báo cáo ai.report/widget/nhật ký gửi thành công đã có trong chat để lưu vào hồ sơ minh chứng; hiện chỉ mô tả và số đọc từ ảnh được lưu trong tài liệu.
 - Bộ CSV và ảnh cho từng Test ID, gồm baseline/sự cố/phục hồi.
 - Word bản thảo được người dùng chọn và hướng dẫn định dạng của trường.
 - Thông tin bìa và tên đề tài chính thức do người dùng xác nhận.

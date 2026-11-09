@@ -11,8 +11,8 @@ Dàn ý này phục vụ tạo slide sau khi chốt dữ liệu. Gợi ý trình
 | 5. Bảo mật và quyền | Bảo mật đường chi nhánh và chính sách truy cập | Sơ đồ tunnel/underlay; ma trận firewall khi có | Có wg0 chưa đủ chứng minh handshake/mọi đường được mã hóa |
 | 6. Giám sát | Zabbix có dữ liệu thật từ ba router | ICMP ping/loss/RTT cùng timestamp | Không dùng agent.ping time=0 để kết luận mất kết nối |
 | 7. Luồng AI | Kiểm tra dữ liệu → quy tắc → ML RTT → báo cáo | Sơ đồ rẽ nhánh dữ liệu cũ, down/loss, đủ mẫu | Phân biệt rõ AI và ngưỡng/quy tắc |
-| 8. Isolation Forest | Thử phát hiện độ trễ khác thường theo lịch sử | Input RTT, 30 mẫu tối thiểu, score và nhãn | 30 là ngưỡng demo; score không phải xác suất; chưa xác nhận đủ mẫu ở mốc docs |
-| 9. Vận hành tự động | systemd chạy và báo cáo được gửi về Zabbix | Nhật ký timer + giá trị report + widget | Chỉ dùng ảnh report/widget khi có nội dung; hiện Last value trống |
+| 8. Isolation Forest | Thử phát hiện độ trễ khác thường theo lịch sử | Input RTT, 30 mẫu tối thiểu, score và nhãn | 30 là ngưỡng demo; score không phải xác suất; ảnh hiện có 64/67/66 mẫu |
+| 9. Vận hành tự động | systemd chạy và báo cáo được gửi về Zabbix | Nhật ký timer + giá trị report + widget | Đã có ảnh báo cáo thật trên AI Network Analysis; nêu sender là đường gửi hoạt động |
 | 10. Kiểm thử mạng | Đường đi, lỗi và phục hồi có bằng chứng | Trước/trong/sau, route/packet loss/thời gian | Chưa có số thì trình bày kế hoạch, không trình bày như kết quả |
 | 11. Đánh giá AI | Đánh giá tách tập khỏe và tình huống lỗi | Bảng TP/FP/TN/FN, score timeline nếu đã đo | Không gộp cảnh báo ping/loss bằng quy tắc vào thành tích ML |
 | 12. Kết luận | Đã làm được gì, còn giới hạn gì | 3 kết quả có căn cứ, 3 việc cần cải thiện | Nói đúng trạng thái trong PROGRESS mới nhất |
@@ -37,7 +37,7 @@ Không chọn thao tác tắt cổng nếu chưa có console và kế hoạch ph
 - Vì sao chọn 30 mẫu? Ngưỡng khởi động demo; chất lượng phải được đo trên dữ liệu riêng.
 - Nếu dữ liệu cũ hoặc API lỗi? Không kết luận khỏe; báo lỗi dữ liệu và kiểm tra timestamp.
 - AI có tự sửa mạng không? Bản hiện tại không tự thay đổi mạng.
-- Tại sao dashboard chưa có dữ liệu? Phân biệt item tồn tại với history.push và widget đã hoạt động.
+- Vì sao chuyển sang sender? Bản history.push gặp lỗi Allowed hosts; sender buộc nguồn/đích local đã được nhận và widget hiển thị thật. Không nói đã sửa triệt để cấu hình nguồn frontend.
 
 ## Quy tắc biên tập
 

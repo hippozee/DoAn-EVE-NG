@@ -23,12 +23,12 @@
 | T06 | Phục hồi đường trực tiếp | Hoàn tác chính thay đổi T05; route quay lại như thiết kế, traffic ổn định | Chờ |
 | T07 | Chính sách BR→HQ | Từ máy thuộc LAN chi nhánh, thử đúng dịch vụ cho phép/bị chặn; ghi firewall counters | Chờ ruleset và ma trận quyền |
 | T08 | QoS khi có tải | Hai luồng cạnh tranh có nhãn/DSCP rõ; đo throughput, RTT, loss trước/sau | Chờ cấu hình và kết quả đọc được |
-| T09 | AI đủ mẫu bình thường | Mỗi host đủ mẫu, có điểm mô hình, ghi tỷ lệ cảnh báo nhầm trên tập khỏe | Chờ đủ mẫu và kiểm thử |
+| T09 | AI đủ mẫu bình thường | Mỗi host đủ mẫu, có điểm mô hình, ghi tỷ lệ cảnh báo nhầm trên tập khỏe | Đã đủ mẫu/có score; chưa đo cảnh báo nhầm |
 | T10 | RTT tăng có kiểm soát | Gây độ trễ trên đúng đường Zabbix đo; lưu thời điểm, RTT và score trước/trong/sau | Chờ |
 | T11 | Mất gói | Gây loss có kiểm soát trên đường đo; kiểm tra nhánh quy tắc, không gọi là phát hiện ML | Chờ |
 | T12 | Mất kết nối | Ping mới bằng 0 và báo quy tắc mất kết nối; phân biệt lỗi thu thập | Chờ |
 | T13 | Dữ liệu cũ/API lỗi | Phải báo lỗi hoặc dữ liệu cũ, không hiển thị kết luận khỏe | Chờ |
-| T14 | Gửi báo cáo/dashboard | history.push không có lỗi từng item; History có timestamp mới, widget cập nhật | Item tồn tại, Last value đang trống |
+| T14 | Gửi báo cáo/dashboard | zabbix_sender nhận đủ một giá trị; widget có timestamp/nội dung mới | Đã xác nhận gửi thật và widget AI Network Analysis |
 | T15 | Tự khởi động | Sau reboot có timer và báo cáo mới; không nhập mật khẩu thủ công | Chưa kiểm thử reboot |
 
 ## Lệnh đọc cấu hình và trạng thái
