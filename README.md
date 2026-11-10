@@ -25,7 +25,7 @@ Mô phỏng mạng nhiều cơ sở trên EVE-NG, dùng Debian 12 + FRRouting đ
 - Đã chuyển publisher sang zabbix_sender, chỉ định nguồn/đích 127.0.0.1. Nhật ký xác nhận processed: 1; failed: 0 và báo cáo thật đã hiển thị trên dashboard riêng **AI Network Analysis**.
 - Ngày 10/11 đã tạo 9 item số, chuyển sang publish_ai_cards.py và quan sát sender nhận đủ 10 giá trị. Dashboard có ba thẻ trạng thái và Graph RTT ba đường với timestamp ngày 10/11.
 - Đồng hồ SERVER-ZABBIX đã được chrony đồng bộ lại; còn cần kiểm tra các router và khả năng giữ giờ sau suspend/reboot.
-- Mới xác nhận luồng đọc → phân tích → gửi → hiển thị; chưa kiểm thử độ chính xác hoặc phát hiện sự cố có nhãn.
+- Đã xác nhận luồng đọc → phân tích → gửi → hiển thị và [một lần thử T10 tăng RTT BR1, phát hiện và phục hồi](docs/tests/T10_RTT_BR1_2026-11-10.md). Chưa đánh giá độ chính xác, tỷ lệ cảnh báo nhầm hoặc thời gian phát hiện định lượng.
 
 ## Tệp hiện có
 
@@ -42,6 +42,6 @@ Các snapshot không phải cấu hình lấy trực tiếp từ lab ngày 09/11
 
 ## Việc ưu tiên
 
-Chốt bố cục ba thẻ và graph RTT, đặt báo cáo dài ở phần Chi tiết → xác nhận đường đo/qdisc → lưu baseline và xuất dữ liệu → kiểm thử độ trễ, mất gói và phục hồi → đánh giá cảnh báo nhầm → bổ sung minh chứng báo cáo.
+Chốt bố cục và sao lưu mã/cấu hình từ VM → lưu baseline cố định và xuất dữ liệu → đánh giá cảnh báo nhầm, thử loss/mất kết nối/dữ liệu cũ khi cần → bổ sung ảnh/CSV cho báo cáo và slide. T10 tăng RTT/phát hiện/phục hồi đã có kết quả chức năng.
 
 Chưa có số đo để tuyên bố độ chính xác AI, thời gian hội tụ, mức giảm băng thông hoặc hiệu quả QoS.
