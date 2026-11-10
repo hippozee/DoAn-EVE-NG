@@ -1,0 +1,10 @@
+[Unit]
+Description=Run Network AI every minute
+
+[Timer]
+OnBootSec=60s
+OnUnitInactiveSec=60s
+Unit=network-ai-check.service
+
+[Install]
+WantedBy=timers.target

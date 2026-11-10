@@ -1,6 +1,6 @@
 # Vận hành phần AI và Zabbix
 
-Mốc 09/11/2026. Mã chương trình trên VM được người dùng dán từ hướng dẫn trong chat; chưa được tải từ VM và đối chiếu byte với repo. Tài liệu này mô tả hành vi của bản đã hướng dẫn và các kết quả đã thấy, không phải bản sao lưu mã nguồn.
+Cập nhật 10/11/2026. Đã nhận bản xuất mã AI, requirements và units từ VM qua gói Base64; kiểm tra gzip CRC/kích thước và header tar đạt. Xem [mã thực tế và hướng dẫn khôi phục](../ai/README.md), [manifest SHA-256](../ai/backup_manifest.json) và [log gốc](../evidence/ai/2026-11-10/test-RTT-BR1.log). Tài liệu đối chiếu bản xuất này; chưa kết nối trực tiếp để kiểm tra trạng thái VM hiện tại.
 
 ## Luồng xử lý
 
@@ -11,7 +11,7 @@ Mốc 09/11/2026. Mã chương trình trên VM được người dùng dán từ
 5. Với kết nối tốt, lấy lịch sử RTT 24 giờ, tối đa 500 mẫu, trước lastclock của mẫu hiện tại; chỉ giữ giá trị >0 và đổi giây sang ms.
 6. Chưa đủ 30 mẫu → CHO DU LIEU. Ít hơn 5 giá trị RTT phân biệt → chưa đánh giá.
 7. Fit IsolationForest một chiều RTT: n_estimators=100, contamination=auto, random_state=42, n_jobs=1; đánh giá mẫu hiện tại bằng predict và decision_function.
-8. Bản hoạt động hiện tại là publish_ai_sender.py: chạy ai_check.py như subprocess, thêm timestamp, rồi gửi stdout vào ai.report bằng zabbix_sender, nguồn/đích 127.0.0.1, host kỹ thuật Zabbix server, key ai.report. Kiểm tra returncode và processed: 1; failed: 0 trước in thông báo thành công.
+8. Bản hoạt động hiện tại là publish_ai_cards.py: chạy ai_check.py như subprocess, thêm timestamp, phân tích từng khối router rồi gửi ai.report cùng ai.state/ai.rtt/ai.loss bằng zabbix_sender, nguồn/đích 127.0.0.1, host kỹ thuật Zabbix server. Kiểm tra returncode và processed đúng số giá trị, failed: 0 trước in thông báo thành công. Với dữ liệu hợp lệ cả ba router: 10 giá trị. Bản publish_ai_sender.py chỉ gửi text là giai đoạn trước.
 9. Bản cũ publish_ai.py dùng history.push và gặp lỗi địa chỉ nguồn; không dùng lẫn với bản sender đã hoạt động.
 
 ## Ý nghĩa đầu ra
@@ -40,16 +40,16 @@ journalctl -u network-ai-check.service -n 50 --no-pager
 
 Service là Type=oneshot: inactive sau khi hoàn thành không tự nó là lỗi. Timer cấu hình OnUnitInactiveSec=60s: khoảng 60 giây sau khi lần chạy trước kết thúc, không phải chính xác mỗi mốc phút. Thời gian phân tích/API cộng vào chu kỳ.
 
-ExecStart hiệu lực hiện tại phải là /opt/network-ai/venv/bin/python -u /opt/network-ai/publish_ai_sender.py, không chỉ ai_check.py hoặc bản publish_ai.py cũ. Có override publish.conf trong thư mục network-ai-check.service.d; dùng systemctl cat để kiểm tra cấu hình hợp nhất.
+ExecStart hợp nhất trong bản xuất hiện tại là /opt/network-ai/venv/bin/python -u /opt/network-ai/publish_ai_cards.py. Service gốc vẫn ghi ai_check.py; cần giữ drop-in publish.conf khi khôi phục. Có override publish.conf trong thư mục network-ai-check.service.d; dùng systemctl cat để kiểm tra cấu hình hợp nhất.
 
 ## Sự cố đã gặp: item có nhưng Last value trống
 
 history.push đã trả error ở phần tử itemid 51184: Connection source address is not in item's allowed hosts list. Zabbix 7.0 kiểm tra cả IP client và nguồn kết nối từ frontend. Chưa xác định chính xác nguồn frontend trong lab; không kết luận chắc do IPv6.
 
-Đường gửi hiện tại dùng zabbix_sender với -z 127.0.0.1 -I 127.0.0.1 -s "Zabbix server" -k ai.report. Dữ liệu thử được nhận, rồi publisher gửi báo cáo thật thành công; widget đã hiển thị nội dung.
+Đường gửi đã chuyển sang zabbix_sender nguồn/đích 127.0.0.1. Bản trước gửi text bằng -s "Zabbix server" -k ai.report. Bản hiện tại dùng input batch -i - với từng dòng mang host "Zabbix server", gửi một báo cáo cùng các item số; log T10 xác nhận 12 batch processed: 10; failed: 0.
 
 Nếu tái diễn:
-1. Xác nhận ExecStart đang dùng publish_ai_sender.py, xem log mới thay vì lỗi cũ.
+1. Xác nhận ExecStart đang dùng publish_ai_cards.py, xem log mới thay vì lỗi cũ.
 2. Kiểm tra item ai.report đúng hostid 10084, type 2, value_type 4, status 0; giữ 127.0.0.1 trong Allowed hosts.
 3. Xem stderr, returncode và processed/failed của sender; kiểm tra cổng 10051, host kỹ thuật, key, TLS policy và cấu hình item khi có lỗi tương ứng.
 4. Item mới có thể cần chờ cache; không tạo bản trùng.
@@ -81,7 +81,7 @@ Timestamp trong report có +00:00 còn UI hiển thị giờ Việt Nam là cùn
 - Chưa đo precision, recall, F1, false positives hoặc độ trễ phát hiện. Không điền số giả.
 - Chu kỳ ICMP khoảng một phút và timer phân tích khoảng một phút có thể bỏ lỡ sự cố ngắn. Đồng bộ thời gian và ghi lúc gây lỗi, lúc Zabbix có mẫu, lúc AI báo.
 - Bản ai_check.py đã hướng dẫn bắt ngoại lệ rồi in LOI nhưng có thể vẫn exit 0. Vì vậy service Finished hoặc subprocess returncode=0 chưa đủ chứng minh phân tích thành công; kiểm tra nội dung từng host.
-- Bản publisher gửi stdout dạng text; báo cáo chứa lỗi vẫn cần phân biệt với báo cáo bình thường. Nên bổ sung trạng thái lỗi có cấu trúc và cảnh báo dữ liệu không cập nhật.
+- Publisher hiện tại phân tích stdout dạng text và đặt state=5 nếu thiếu khối, có lỗi hoặc metrics không hợp lệ; chỉ gửi RTT/loss khi hợp lệ. Còn cần đầu ra JSON có cấu trúc, kiểm thử lỗi trên lab và cảnh báo nodata khi publisher dừng hoàn toàn.
 - Chưa xác nhận phần trigger/cảnh báo chủ động; widget chỉ hiển thị thông tin.
 
 ## Mở rộng theo thứ tự ưu tiên
@@ -91,7 +91,7 @@ Timestamp trong report có +00:00 còn UI hiển thị giờ Việt Nam là cùn
 3. Lưu mô hình và metadata (thời gian học, số mẫu, ID item, phiên bản).
 4. Thêm jitter/loss/lưu lượng khi có dữ liệu phù hợp; đánh giá riêng từng đặc trưng.
 5. Đổi tài khoản Admin sang tài khoản dịch vụ chỉ đủ quyền cần thiết sau khi thử nghiệm hoạt động.
-6. Đưa bản mã thật từ VM lên repo sau khi bỏ thông tin đăng nhập. Không đưa venv, database hay khóa riêng vào Git.
+6. Đã đưa bản mã thật từ gói VM hợp lệ vào ai/. Còn thiếu export Zabbix, cấu hình mạng/bảo mật hiện tại và kiểm thử dựng lại trên môi trường sạch. Không đưa venv, database hay khóa riêng vào Git.
 
 ## Tài liệu kỹ thuật
 

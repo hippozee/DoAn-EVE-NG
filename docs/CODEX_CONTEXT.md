@@ -1,6 +1,6 @@
 # Ngữ cảnh cho Codex làm báo cáo và slide
 
-Ngày cập nhật: 09/11/2026 (Asia/Ho_Chi_Minh). Repo: hippozee/DoAn-EVE-NG.
+Ngày cập nhật: 10/11/2026 (Asia/Ho_Chi_Minh). Repo: hippozee/DoAn-EVE-NG.
 
 ## Mục tiêu và phạm vi
 
@@ -10,6 +10,8 @@ Tên đề tài làm việc: **Xây dựng mô hình mạng nhiều cơ sở có
 
 ## Thứ tự sử dụng nguồn
 
+- Mã AI thực tế đã nhận từ bản sao VM ngày 10/11: đọc [ai/README.md](../ai/README.md), manifest và [log T10 gốc](../evidence/ai/2026-11-10/test-RTT-BR1.log). Gói qua kiểm tra gzip/tar; không có credentials.json. Đây là đối chiếu bản xuất, chưa truy cập VM hiện tại.
+- Cập nhật dashboard, đồng hồ và kiểm thử T10: đọc PROGRESS_2026-11-10.md và docs/tests/T10_RTT_BR1_2026-11-10.md.
 - Trạng thái ngày 09/11: dựa ảnh và nhật ký người dùng gửi, được ghi trong PROGRESS_2026-11-09.md.
 - Cấu hình lưu trong repo: snapshot tại commit c04f55196230c5aff2c9e0d1dcb5845d40b3ef2f, trước lần bổ sung tài liệu này.
 - Khuyến nghị hoặc thiết kế chưa kiểm thử phải ghi là dự kiến.

@@ -13,6 +13,11 @@ Mốc repo trước bổ sung docs: c04f55196230c5aff2c9e0d1dcb5845d40b3ef2f. Đ
 | [HQ snapshot](../HQ_CHECK.txt) | Interface, Linux route, OSPF Full, FRR route |
 | [BR1 snapshot](../BR1_check.txt) | LAN/WAN/underlay/wg0; route tới LAN BR2 qua wg0 |
 | [BR2 snapshot](../BR2_CHECK.txt) | LAN/WAN/underlay/wg0; route tới LAN BR1 qua wg0 |
+| [Mã AI thực tế](../ai/README.md) | Bốn tệp Python, units, requirements từ gói VM ngày 10/11; gzip/tar đạt; không có credentials.json |
+| [Manifest nguồn](../ai/backup_manifest.json) | SHA-256 gói và từng tệp; đường dẫn trong entries là đường dẫn gốc của gói |
+| [Log T10 gốc](../evidence/ai/2026-11-10/test-RTT-BR1.log) | 12 báo cáo hoàn chỉnh và kết quả sender; chứng cứ trước/trong/sau tăng RTT |
+| [CSV trích log](../evidence/ai/2026-11-10/observations.csv) | 36 dòng router/báo cáo; timestamp báo cáo, không phải lastclock ICMP |
+| [Kiểm tra offline](../evidence/ai/2026-11-10/validation.json) | Biên dịch cú pháp bốn tệp; parser 8 ca tổng hợp + 36 khối log; không thực thi API hoặc sender |
 | [Thư mục Word](../DoAn_EVE) | Ba tài liệu cũ: Cam_nang_trien_khai_do_an_Network_AI.docx, Mau_1_Hoan_thien_Network_AI.docx, Mau_2_Hoan_thien_Network_AI.docx; cần đọc trước khi dùng |
 | [Ảnh 05/11](../Screenshot%202026-11-05%20153058.png) | Có tệp; chưa phân tích, chưa dùng làm bằng chứng nội dung |
 | [Ảnh tên QoS](../screenshotsqos_test.png.png) | Có tệp; tên không đủ chứng minh QoS đạt |
@@ -46,10 +51,10 @@ Không biến các dòng log Finished thành bằng chứng độ chính xác AI
 - Ảnh topology hiện tại đủ nhãn và kết nối; cấu hình mới nếu khác snapshot.
 - Cấu hình Linux networking, FRR, WireGuard đã che khóa; handshake/counters.
 - Firewall/QoS đã che thông tin nhạy cảm, kèm test từ đúng LAN.
-- Mã AI thật từ VM, requirements và units thực tế, không kèm credentials/venv.
+- Đã có mã AI thật, requirements và units thực tế. Còn cần cấu hình mạng/bảo mật hiện tại và kiểm tra dựng lại trên môi trường sạch.
 - Export cấu hình Zabbix đã loại bí mật; bảng item và lịch sử có timestamp.
 - Thu lại đúng ảnh báo cáo ai.report/widget/nhật ký gửi thành công đã có trong chat để lưu vào hồ sơ minh chứng; hiện chỉ mô tả và số đọc từ ảnh được lưu trong tài liệu.
-- Bộ CSV và ảnh cho từng Test ID, gồm baseline/sự cố/phục hồi.
+- Đã có CSV trích log T10. Còn cần export lịch sử ICMP kèm lastclock và ảnh cho từng Test ID, gồm baseline/sự cố/phục hồi.
 - Word bản thảo được người dùng chọn và hướng dẫn định dạng của trường.
 - Thông tin bìa và tên đề tài chính thức do người dùng xác nhận.
 

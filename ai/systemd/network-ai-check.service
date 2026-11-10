@@ -1,0 +1,10 @@
+[Unit]
+Description=Network AI analysis from Zabbix
+After=network-online.target zabbix-server.service
+
+[Service]
+Type=oneshot
+User=root
+WorkingDirectory=/opt/network-ai
+ExecStart=/opt/network-ai/venv/bin/python -u /opt/network-ai/ai_check.py
+TimeoutStartSec=90

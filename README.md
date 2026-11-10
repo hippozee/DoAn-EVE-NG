@@ -27,6 +27,8 @@ Mô phỏng mạng nhiều cơ sở trên EVE-NG, dùng Debian 12 + FRRouting đ
 - Đồng hồ SERVER-ZABBIX đã được chrony đồng bộ lại; còn cần kiểm tra các router và khả năng giữ giờ sau suspend/reboot.
 - Đã xác nhận luồng đọc → phân tích → gửi → hiển thị và [một lần thử T10 tăng RTT BR1, phát hiện và phục hồi](docs/tests/T10_RTT_BR1_2026-11-10.md). Chưa đánh giá độ chính xác, tỷ lệ cảnh báo nhầm hoặc thời gian phát hiện định lượng.
 
+Đã nhận [mã AI thực tế, units và requirements từ VM](ai/README.md), kèm [log T10 gốc và CSV trích xuất](evidence/ai/2026-11-10). Gói qua kiểm tra toàn vẹn; không chứa credentials.json. Đây là bản sao nguồn đã xuất, không phải kiểm tra trực tiếp trạng thái VM hiện tại.
+
 ## Tệp hiện có
 
 | Nhóm | Nguồn |
@@ -35,6 +37,8 @@ Mô phỏng mạng nhiều cơ sở trên EVE-NG, dùng Debian 12 + FRRouting đ
 | FRR HQ / BR2 | [HQ_FRR.txt](HQ_FRR.txt), [BR2_FRR.txt](BR2_FRR.txt) |
 | FRR BR1 và bản ghi terminal | [BR1.txt](BR1.txt), cần tách phần cấu hình khỏi log và ký tự điều khiển trước khi dùng |
 | Snapshot interface, route, OSPF | [HQ_CHECK.txt](HQ_CHECK.txt), [BR1_check.txt](BR1_check.txt), [BR2_CHECK.txt](BR2_CHECK.txt) |
+| AI từ VM | [Mã, cấu hình và hướng dẫn](ai/README.md); [manifest SHA-256](ai/backup_manifest.json) |
+| Nhật ký/CSV T10 | [Minh chứng AI 10/11](evidence/ai/2026-11-10) |
 | Tài liệu Word cũ | [DoAn_EVE](DoAn_EVE), cần đọc nội dung trước khi tái sử dụng |
 | Ảnh cũ | Hai tệp PNG ở thư mục gốc; chưa được phân tích trong lần bổ sung hồ sơ này |
 
@@ -42,6 +46,6 @@ Các snapshot không phải cấu hình lấy trực tiếp từ lab ngày 09/11
 
 ## Việc ưu tiên
 
-Chốt bố cục và sao lưu mã/cấu hình từ VM → lưu baseline cố định và xuất dữ liệu → đánh giá cảnh báo nhầm, thử loss/mất kết nối/dữ liệu cũ khi cần → bổ sung ảnh/CSV cho báo cáo và slide. T10 tăng RTT/phát hiện/phục hồi đã có kết quả chức năng.
+Đã sao lưu mã AI/units/requirements và log T10. Tiếp theo: chốt bố cục → lưu baseline cố định và xuất lịch sử ICMP có lastclock → đánh giá cảnh báo nhầm, thử loss/mất kết nối/dữ liệu cũ khi cần → bổ sung ảnh/CSV cho báo cáo và slide. T10 tăng RTT/phát hiện/phục hồi đã có kết quả chức năng.
 
 Chưa có số đo để tuyên bố độ chính xác AI, thời gian hội tụ, mức giảm băng thông hoặc hiệu quả QoS.

@@ -1,0 +1,289 @@
+2026-11-10T07:21:02+0000 localhost systemd[1]: Starting network-ai-check.service - Network AI analysis from Zabbix...
+2026-11-10T07:21:03+0000 localhost python[1159]: NETWORK AI REPORT
+2026-11-10T07:21:03+0000 localhost python[1159]: Updated: 2026-11-10T07:21:03+00:00
+2026-11-10T07:21:03+0000 localhost python[1159]: --- R-HQ ---
+2026-11-10T07:21:03+0000 localhost python[1159]: Ping=1 | Loss=0.00% | RTT=0.601 ms
+2026-11-10T07:21:03+0000 localhost python[1159]: So mau lich su RTT hop le: 356
+2026-11-10T07:21:03+0000 localhost python[1159]: AI: RTT BINH THUONG | decision_score=0.0989
+2026-11-10T07:21:03+0000 localhost python[1159]: --- R-BR1 ---
+2026-11-10T07:21:03+0000 localhost python[1159]: Ping=1 | Loss=0.00% | RTT=1.041 ms
+2026-11-10T07:21:03+0000 localhost python[1159]: So mau lich su RTT hop le: 359
+2026-11-10T07:21:03+0000 localhost python[1159]: AI: RTT BINH THUONG | decision_score=0.1221
+2026-11-10T07:21:03+0000 localhost python[1159]: --- R-BR2 ---
+2026-11-10T07:21:03+0000 localhost python[1159]: Ping=1 | Loss=0.00% | RTT=1.053 ms
+2026-11-10T07:21:03+0000 localhost python[1159]: So mau lich su RTT hop le: 358
+2026-11-10T07:21:03+0000 localhost python[1159]: AI: RTT BINH THUONG | decision_score=0.1207
+2026-11-10T07:21:03+0000 localhost python[1159]: HQ: state=0
+2026-11-10T07:21:03+0000 localhost python[1159]: BR1: state=0
+2026-11-10T07:21:03+0000 localhost python[1159]: BR2: state=0
+2026-11-10T07:21:03+0000 localhost python[1159]: Response from "127.0.0.1:10051": "processed: 10; failed: 0; total: 10; seconds spent: 0.000875"
+2026-11-10T07:21:03+0000 localhost python[1159]: sent: 10; skipped: 0; total: 10
+2026-11-10T07:21:03+0000 localhost python[1159]: THANH CONG: DA GUI DU LIEU CHO CAC THE AI
+2026-11-10T07:21:03+0000 localhost systemd[1]: network-ai-check.service: Deactivated successfully.
+2026-11-10T07:21:03+0000 localhost systemd[1]: Finished network-ai-check.service - Network AI analysis from Zabbix.
+2026-11-10T07:21:03+0000 localhost systemd[1]: network-ai-check.service: Consumed 1.462s CPU time.
+2026-11-10T07:22:18+0000 localhost systemd[1]: Starting network-ai-check.service - Network AI analysis from Zabbix...
+2026-11-10T07:22:19+0000 localhost python[1175]: NETWORK AI REPORT
+2026-11-10T07:22:19+0000 localhost python[1175]: Updated: 2026-11-10T07:22:19+00:00
+2026-11-10T07:22:19+0000 localhost python[1175]: --- R-HQ ---
+2026-11-10T07:22:19+0000 localhost python[1175]: Ping=1 | Loss=0.00% | RTT=0.572 ms
+2026-11-10T07:22:19+0000 localhost python[1175]: So mau lich su RTT hop le: 357
+2026-11-10T07:22:19+0000 localhost python[1175]: AI: RTT BINH THUONG | decision_score=0.0841
+2026-11-10T07:22:19+0000 localhost python[1175]: --- R-BR1 ---
+2026-11-10T07:22:19+0000 localhost python[1175]: Ping=1 | Loss=0.00% | RTT=1.038 ms
+2026-11-10T07:22:19+0000 localhost python[1175]: So mau lich su RTT hop le: 360
+2026-11-10T07:22:19+0000 localhost python[1175]: AI: RTT BINH THUONG | decision_score=0.1119
+2026-11-10T07:22:19+0000 localhost python[1175]: --- R-BR2 ---
+2026-11-10T07:22:19+0000 localhost python[1175]: Ping=1 | Loss=0.00% | RTT=0.854 ms
+2026-11-10T07:22:19+0000 localhost python[1175]: So mau lich su RTT hop le: 359
+2026-11-10T07:22:19+0000 localhost python[1175]: AI: RTT BINH THUONG | decision_score=0.0446
+2026-11-10T07:22:19+0000 localhost python[1175]: HQ: state=0
+2026-11-10T07:22:19+0000 localhost python[1175]: BR1: state=0
+2026-11-10T07:22:19+0000 localhost python[1175]: BR2: state=0
+2026-11-10T07:22:19+0000 localhost python[1175]: Response from "127.0.0.1:10051": "processed: 10; failed: 0; total: 10; seconds spent: 0.000903"
+2026-11-10T07:22:19+0000 localhost python[1175]: sent: 10; skipped: 0; total: 10
+2026-11-10T07:22:19+0000 localhost python[1175]: THANH CONG: DA GUI DU LIEU CHO CAC THE AI
+2026-11-10T07:22:19+0000 localhost systemd[1]: network-ai-check.service: Deactivated successfully.
+2026-11-10T07:22:19+0000 localhost systemd[1]: Finished network-ai-check.service - Network AI analysis from Zabbix.
+2026-11-10T07:22:19+0000 localhost systemd[1]: network-ai-check.service: Consumed 1.448s CPU time.
+2026-11-10T07:23:35+0000 localhost systemd[1]: Starting network-ai-check.service - Network AI analysis from Zabbix...
+2026-11-10T07:23:36+0000 localhost python[1193]: NETWORK AI REPORT
+2026-11-10T07:23:36+0000 localhost python[1193]: Updated: 2026-11-10T07:23:36+00:00
+2026-11-10T07:23:36+0000 localhost python[1193]: --- R-HQ ---
+2026-11-10T07:23:36+0000 localhost python[1193]: Ping=1 | Loss=0.00% | RTT=0.666 ms
+2026-11-10T07:23:36+0000 localhost python[1193]: So mau lich su RTT hop le: 359
+2026-11-10T07:23:36+0000 localhost python[1193]: AI: RTT BINH THUONG | decision_score=0.0813
+2026-11-10T07:23:36+0000 localhost python[1193]: --- R-BR1 ---
+2026-11-10T07:23:36+0000 localhost python[1193]: Ping=1 | Loss=0.00% | RTT=1.197 ms
+2026-11-10T07:23:36+0000 localhost python[1193]: So mau lich su RTT hop le: 361
+2026-11-10T07:23:36+0000 localhost python[1193]: AI: RTT BINH THUONG | decision_score=0.1118
+2026-11-10T07:23:36+0000 localhost python[1193]: --- R-BR2 ---
+2026-11-10T07:23:36+0000 localhost python[1193]: Ping=1 | Loss=0.00% | RTT=1.110 ms
+2026-11-10T07:23:36+0000 localhost python[1193]: So mau lich su RTT hop le: 360
+2026-11-10T07:23:36+0000 localhost python[1193]: AI: RTT BINH THUONG | decision_score=0.1136
+2026-11-10T07:23:36+0000 localhost python[1193]: HQ: state=0
+2026-11-10T07:23:36+0000 localhost python[1193]: BR1: state=0
+2026-11-10T07:23:36+0000 localhost python[1193]: BR2: state=0
+2026-11-10T07:23:36+0000 localhost python[1193]: Response from "127.0.0.1:10051": "processed: 10; failed: 0; total: 10; seconds spent: 0.001058"
+2026-11-10T07:23:36+0000 localhost python[1193]: sent: 10; skipped: 0; total: 10
+2026-11-10T07:23:36+0000 localhost python[1193]: THANH CONG: DA GUI DU LIEU CHO CAC THE AI
+2026-11-10T07:23:36+0000 localhost systemd[1]: network-ai-check.service: Deactivated successfully.
+2026-11-10T07:23:36+0000 localhost systemd[1]: Finished network-ai-check.service - Network AI analysis from Zabbix.
+2026-11-10T07:23:36+0000 localhost systemd[1]: network-ai-check.service: Consumed 1.439s CPU time.
+2026-11-10T07:24:38+0000 localhost systemd[1]: Starting network-ai-check.service - Network AI analysis from Zabbix...
+2026-11-10T07:24:39+0000 localhost python[1228]: NETWORK AI REPORT
+2026-11-10T07:24:39+0000 localhost python[1228]: Updated: 2026-11-10T07:24:39+00:00
+2026-11-10T07:24:39+0000 localhost python[1228]: --- R-HQ ---
+2026-11-10T07:24:39+0000 localhost python[1228]: Ping=1 | Loss=0.00% | RTT=0.613 ms
+2026-11-10T07:24:39+0000 localhost python[1228]: So mau lich su RTT hop le: 360
+2026-11-10T07:24:39+0000 localhost python[1228]: AI: RTT BINH THUONG | decision_score=0.0931
+2026-11-10T07:24:39+0000 localhost python[1228]: --- R-BR1 ---
+2026-11-10T07:24:39+0000 localhost python[1228]: Ping=1 | Loss=0.00% | RTT=107.667 ms
+2026-11-10T07:24:39+0000 localhost python[1228]: So mau lich su RTT hop le: 363
+2026-11-10T07:24:39+0000 localhost python[1228]: AI: NGHI NGO BAT THUONG RTT | decision_score=-0.3752
+2026-11-10T07:24:39+0000 localhost python[1228]: --- R-BR2 ---
+2026-11-10T07:24:39+0000 localhost python[1228]: Ping=1 | Loss=0.00% | RTT=0.967 ms
+2026-11-10T07:24:39+0000 localhost python[1228]: So mau lich su RTT hop le: 362
+2026-11-10T07:24:39+0000 localhost python[1228]: AI: RTT BINH THUONG | decision_score=0.1251
+2026-11-10T07:24:39+0000 localhost python[1228]: HQ: state=0
+2026-11-10T07:24:39+0000 localhost python[1228]: BR1: state=1
+2026-11-10T07:24:39+0000 localhost python[1228]: BR2: state=0
+2026-11-10T07:24:39+0000 localhost python[1228]: Response from "127.0.0.1:10051": "processed: 10; failed: 0; total: 10; seconds spent: 0.000456"
+2026-11-10T07:24:39+0000 localhost python[1228]: sent: 10; skipped: 0; total: 10
+2026-11-10T07:24:39+0000 localhost python[1228]: THANH CONG: DA GUI DU LIEU CHO CAC THE AI
+2026-11-10T07:24:39+0000 localhost systemd[1]: network-ai-check.service: Deactivated successfully.
+2026-11-10T07:24:39+0000 localhost systemd[1]: Finished network-ai-check.service - Network AI analysis from Zabbix.
+2026-11-10T07:24:39+0000 localhost systemd[1]: network-ai-check.service: Consumed 1.431s CPU time.
+2026-11-10T07:25:22+0000 localhost systemd[1]: Starting network-ai-check.service - Network AI analysis from Zabbix...
+2026-11-10T07:25:24+0000 localhost python[1241]: NETWORK AI REPORT
+2026-11-10T07:25:24+0000 localhost python[1241]: Updated: 2026-11-10T07:25:24+00:00
+2026-11-10T07:25:24+0000 localhost python[1241]: --- R-HQ ---
+2026-11-10T07:25:24+0000 localhost python[1241]: Ping=1 | Loss=0.00% | RTT=0.613 ms
+2026-11-10T07:25:24+0000 localhost python[1241]: So mau lich su RTT hop le: 360
+2026-11-10T07:25:24+0000 localhost python[1241]: AI: RTT BINH THUONG | decision_score=0.0931
+2026-11-10T07:25:24+0000 localhost python[1241]: --- R-BR1 ---
+2026-11-10T07:25:24+0000 localhost python[1241]: Ping=1 | Loss=0.00% | RTT=107.667 ms
+2026-11-10T07:25:24+0000 localhost python[1241]: So mau lich su RTT hop le: 363
+2026-11-10T07:25:24+0000 localhost python[1241]: AI: NGHI NGO BAT THUONG RTT | decision_score=-0.3752
+2026-11-10T07:25:24+0000 localhost python[1241]: --- R-BR2 ---
+2026-11-10T07:25:24+0000 localhost python[1241]: Ping=1 | Loss=0.00% | RTT=0.967 ms
+2026-11-10T07:25:24+0000 localhost python[1241]: So mau lich su RTT hop le: 362
+2026-11-10T07:25:24+0000 localhost python[1241]: AI: RTT BINH THUONG | decision_score=0.1251
+2026-11-10T07:25:24+0000 localhost python[1241]: HQ: state=0
+2026-11-10T07:25:24+0000 localhost python[1241]: BR1: state=1
+2026-11-10T07:25:24+0000 localhost python[1241]: BR2: state=0
+2026-11-10T07:25:24+0000 localhost python[1241]: Response from "127.0.0.1:10051": "processed: 10; failed: 0; total: 10; seconds spent: 0.000802"
+2026-11-10T07:25:24+0000 localhost python[1241]: sent: 10; skipped: 0; total: 10
+2026-11-10T07:25:24+0000 localhost python[1241]: THANH CONG: DA GUI DU LIEU CHO CAC THE AI
+2026-11-10T07:25:24+0000 localhost systemd[1]: network-ai-check.service: Deactivated successfully.
+2026-11-10T07:25:24+0000 localhost systemd[1]: Finished network-ai-check.service - Network AI analysis from Zabbix.
+2026-11-10T07:25:24+0000 localhost systemd[1]: network-ai-check.service: Consumed 1.491s CPU time.
+2026-11-10T07:26:25+0000 localhost systemd[1]: Starting network-ai-check.service - Network AI analysis from Zabbix...
+2026-11-10T07:26:26+0000 localhost python[1257]: NETWORK AI REPORT
+2026-11-10T07:26:26+0000 localhost python[1257]: Updated: 2026-11-10T07:26:26+00:00
+2026-11-10T07:26:26+0000 localhost python[1257]: --- R-HQ ---
+2026-11-10T07:26:26+0000 localhost python[1257]: Ping=1 | Loss=0.00% | RTT=0.652 ms
+2026-11-10T07:26:26+0000 localhost python[1257]: So mau lich su RTT hop le: 361
+2026-11-10T07:26:26+0000 localhost python[1257]: AI: RTT BINH THUONG | decision_score=0.0905
+2026-11-10T07:26:26+0000 localhost python[1257]: --- R-BR1 ---
+2026-11-10T07:26:26+0000 localhost python[1257]: Ping=1 | Loss=0.00% | RTT=107.667 ms
+2026-11-10T07:26:26+0000 localhost python[1257]: So mau lich su RTT hop le: 364
+2026-11-10T07:26:26+0000 localhost python[1257]: AI: NGHI NGO BAT THUONG RTT | decision_score=-0.3835
+2026-11-10T07:26:26+0000 localhost python[1257]: --- R-BR2 ---
+2026-11-10T07:26:26+0000 localhost python[1257]: Ping=1 | Loss=0.00% | RTT=0.939 ms
+2026-11-10T07:26:26+0000 localhost python[1257]: So mau lich su RTT hop le: 363
+2026-11-10T07:26:26+0000 localhost python[1257]: AI: RTT BINH THUONG | decision_score=0.1189
+2026-11-10T07:26:26+0000 localhost python[1257]: HQ: state=0
+2026-11-10T07:26:26+0000 localhost python[1257]: BR1: state=1
+2026-11-10T07:26:26+0000 localhost python[1257]: BR2: state=0
+2026-11-10T07:26:26+0000 localhost python[1257]: Response from "127.0.0.1:10051": "processed: 10; failed: 0; total: 10; seconds spent: 0.000844"
+2026-11-10T07:26:26+0000 localhost python[1257]: sent: 10; skipped: 0; total: 10
+2026-11-10T07:26:26+0000 localhost python[1257]: THANH CONG: DA GUI DU LIEU CHO CAC THE AI
+2026-11-10T07:26:26+0000 localhost systemd[1]: network-ai-check.service: Deactivated successfully.
+2026-11-10T07:26:26+0000 localhost systemd[1]: Finished network-ai-check.service - Network AI analysis from Zabbix.
+2026-11-10T07:26:26+0000 localhost systemd[1]: network-ai-check.service: Consumed 1.380s CPU time.
+2026-11-10T07:27:35+0000 localhost systemd[1]: Starting network-ai-check.service - Network AI analysis from Zabbix...
+2026-11-10T07:27:36+0000 localhost python[1277]: NETWORK AI REPORT
+2026-11-10T07:27:36+0000 localhost python[1277]: Updated: 2026-11-10T07:27:36+00:00
+2026-11-10T07:27:36+0000 localhost python[1277]: --- R-HQ ---
+2026-11-10T07:27:36+0000 localhost python[1277]: Ping=1 | Loss=0.00% | RTT=0.621 ms
+2026-11-10T07:27:36+0000 localhost python[1277]: So mau lich su RTT hop le: 363
+2026-11-10T07:27:36+0000 localhost python[1277]: AI: RTT BINH THUONG | decision_score=0.0935
+2026-11-10T07:27:36+0000 localhost python[1277]: --- R-BR1 ---
+2026-11-10T07:27:36+0000 localhost python[1277]: Ping=1 | Loss=0.00% | RTT=1.175 ms
+2026-11-10T07:27:36+0000 localhost python[1277]: So mau lich su RTT hop le: 366
+2026-11-10T07:27:36+0000 localhost python[1277]: AI: RTT BINH THUONG | decision_score=0.1174
+2026-11-10T07:27:36+0000 localhost python[1277]: --- R-BR2 ---
+2026-11-10T07:27:36+0000 localhost python[1277]: Ping=1 | Loss=0.00% | RTT=1.064 ms
+2026-11-10T07:27:36+0000 localhost python[1277]: So mau lich su RTT hop le: 365
+2026-11-10T07:27:36+0000 localhost python[1277]: AI: RTT BINH THUONG | decision_score=0.1108
+2026-11-10T07:27:36+0000 localhost python[1277]: HQ: state=0
+2026-11-10T07:27:36+0000 localhost python[1277]: BR1: state=0
+2026-11-10T07:27:36+0000 localhost python[1277]: BR2: state=0
+2026-11-10T07:27:36+0000 localhost python[1277]: Response from "127.0.0.1:10051": "processed: 10; failed: 0; total: 10; seconds spent: 0.000939"
+2026-11-10T07:27:36+0000 localhost python[1277]: sent: 10; skipped: 0; total: 10
+2026-11-10T07:27:36+0000 localhost python[1277]: THANH CONG: DA GUI DU LIEU CHO CAC THE AI
+2026-11-10T07:27:36+0000 localhost systemd[1]: network-ai-check.service: Deactivated successfully.
+2026-11-10T07:27:36+0000 localhost systemd[1]: Finished network-ai-check.service - Network AI analysis from Zabbix.
+2026-11-10T07:27:36+0000 localhost systemd[1]: network-ai-check.service: Consumed 1.554s CPU time.
+2026-11-10T07:28:38+0000 localhost systemd[1]: Starting network-ai-check.service - Network AI analysis from Zabbix...
+2026-11-10T07:28:40+0000 localhost python[1293]: NETWORK AI REPORT
+2026-11-10T07:28:40+0000 localhost python[1293]: Updated: 2026-11-10T07:28:40+00:00
+2026-11-10T07:28:40+0000 localhost python[1293]: --- R-HQ ---
+2026-11-10T07:28:40+0000 localhost python[1293]: Ping=1 | Loss=0.00% | RTT=0.553 ms
+2026-11-10T07:28:40+0000 localhost python[1293]: So mau lich su RTT hop le: 364
+2026-11-10T07:28:40+0000 localhost python[1293]: AI: RTT BINH THUONG | decision_score=0.0829
+2026-11-10T07:28:40+0000 localhost python[1293]: --- R-BR1 ---
+2026-11-10T07:28:40+0000 localhost python[1293]: Ping=1 | Loss=0.00% | RTT=0.948 ms
+2026-11-10T07:28:40+0000 localhost python[1293]: So mau lich su RTT hop le: 367
+2026-11-10T07:28:40+0000 localhost python[1293]: AI: RTT BINH THUONG | decision_score=0.0877
+2026-11-10T07:28:40+0000 localhost python[1293]: --- R-BR2 ---
+2026-11-10T07:28:40+0000 localhost python[1293]: Ping=1 | Loss=0.00% | RTT=1.007 ms
+2026-11-10T07:28:40+0000 localhost python[1293]: So mau lich su RTT hop le: 366
+2026-11-10T07:28:40+0000 localhost python[1293]: AI: RTT BINH THUONG | decision_score=0.1106
+2026-11-10T07:28:40+0000 localhost python[1293]: HQ: state=0
+2026-11-10T07:28:40+0000 localhost python[1293]: BR1: state=0
+2026-11-10T07:28:40+0000 localhost python[1293]: BR2: state=0
+2026-11-10T07:28:40+0000 localhost python[1293]: Response from "127.0.0.1:10051": "processed: 10; failed: 0; total: 10; seconds spent: 0.000837"
+2026-11-10T07:28:40+0000 localhost python[1293]: sent: 10; skipped: 0; total: 10
+2026-11-10T07:28:40+0000 localhost python[1293]: THANH CONG: DA GUI DU LIEU CHO CAC THE AI
+2026-11-10T07:28:40+0000 localhost systemd[1]: network-ai-check.service: Deactivated successfully.
+2026-11-10T07:28:40+0000 localhost systemd[1]: Finished network-ai-check.service - Network AI analysis from Zabbix.
+2026-11-10T07:28:40+0000 localhost systemd[1]: network-ai-check.service: Consumed 1.537s CPU time.
+2026-11-10T07:29:58+0000 localhost systemd[1]: Starting network-ai-check.service - Network AI analysis from Zabbix...
+2026-11-10T07:30:00+0000 localhost python[1307]: NETWORK AI REPORT
+2026-11-10T07:30:00+0000 localhost python[1307]: Updated: 2026-11-10T07:30:00+00:00
+2026-11-10T07:30:00+0000 localhost python[1307]: --- R-HQ ---
+2026-11-10T07:30:00+0000 localhost python[1307]: Ping=1 | Loss=0.00% | RTT=0.738 ms
+2026-11-10T07:30:00+0000 localhost python[1307]: So mau lich su RTT hop le: 365
+2026-11-10T07:30:00+0000 localhost python[1307]: AI: RTT BINH THUONG | decision_score=0.0159
+2026-11-10T07:30:00+0000 localhost python[1307]: --- R-BR1 ---
+2026-11-10T07:30:00+0000 localhost python[1307]: Ping=1 | Loss=0.00% | RTT=1.420 ms
+2026-11-10T07:30:00+0000 localhost python[1307]: So mau lich su RTT hop le: 368
+2026-11-10T07:30:00+0000 localhost python[1307]: AI: RTT BINH THUONG | decision_score=0.0359
+2026-11-10T07:30:00+0000 localhost python[1307]: --- R-BR2 ---
+2026-11-10T07:30:00+0000 localhost python[1307]: Ping=1 | Loss=0.00% | RTT=1.239 ms
+2026-11-10T07:30:00+0000 localhost python[1307]: So mau lich su RTT hop le: 367
+2026-11-10T07:30:00+0000 localhost python[1307]: AI: RTT BINH THUONG | decision_score=0.0702
+2026-11-10T07:30:00+0000 localhost python[1307]: HQ: state=0
+2026-11-10T07:30:00+0000 localhost python[1307]: BR1: state=0
+2026-11-10T07:30:00+0000 localhost python[1307]: BR2: state=0
+2026-11-10T07:30:00+0000 localhost python[1307]: Response from "127.0.0.1:10051": "processed: 10; failed: 0; total: 10; seconds spent: 0.000460"
+2026-11-10T07:30:00+0000 localhost python[1307]: sent: 10; skipped: 0; total: 10
+2026-11-10T07:30:00+0000 localhost python[1307]: THANH CONG: DA GUI DU LIEU CHO CAC THE AI
+2026-11-10T07:30:00+0000 localhost systemd[1]: network-ai-check.service: Deactivated successfully.
+2026-11-10T07:30:00+0000 localhost systemd[1]: Finished network-ai-check.service - Network AI analysis from Zabbix.
+2026-11-10T07:30:00+0000 localhost systemd[1]: network-ai-check.service: Consumed 1.663s CPU time.
+2026-11-10T07:31:18+0000 localhost systemd[1]: Starting network-ai-check.service - Network AI analysis from Zabbix...
+2026-11-10T07:31:20+0000 localhost python[1329]: NETWORK AI REPORT
+2026-11-10T07:31:20+0000 localhost python[1329]: Updated: 2026-11-10T07:31:20+00:00
+2026-11-10T07:31:20+0000 localhost python[1329]: --- R-HQ ---
+2026-11-10T07:31:20+0000 localhost python[1329]: Ping=1 | Loss=0.00% | RTT=0.541 ms
+2026-11-10T07:31:20+0000 localhost python[1329]: So mau lich su RTT hop le: 366
+2026-11-10T07:31:20+0000 localhost python[1329]: AI: RTT BINH THUONG | decision_score=0.0895
+2026-11-10T07:31:20+0000 localhost python[1329]: --- R-BR1 ---
+2026-11-10T07:31:20+0000 localhost python[1329]: Ping=1 | Loss=0.00% | RTT=0.980 ms
+2026-11-10T07:31:20+0000 localhost python[1329]: So mau lich su RTT hop le: 369
+2026-11-10T07:31:20+0000 localhost python[1329]: AI: RTT BINH THUONG | decision_score=0.1143
+2026-11-10T07:31:20+0000 localhost python[1329]: --- R-BR2 ---
+2026-11-10T07:31:20+0000 localhost python[1329]: Ping=1 | Loss=0.00% | RTT=0.922 ms
+2026-11-10T07:31:20+0000 localhost python[1329]: So mau lich su RTT hop le: 368
+2026-11-10T07:31:20+0000 localhost python[1329]: AI: RTT BINH THUONG | decision_score=0.0841
+2026-11-10T07:31:20+0000 localhost python[1329]: HQ: state=0
+2026-11-10T07:31:20+0000 localhost python[1329]: BR1: state=0
+2026-11-10T07:31:20+0000 localhost python[1329]: BR2: state=0
+2026-11-10T07:31:20+0000 localhost python[1329]: Response from "127.0.0.1:10051": "processed: 10; failed: 0; total: 10; seconds spent: 0.000150"
+2026-11-10T07:31:20+0000 localhost python[1329]: sent: 10; skipped: 0; total: 10
+2026-11-10T07:31:20+0000 localhost python[1329]: THANH CONG: DA GUI DU LIEU CHO CAC THE AI
+2026-11-10T07:31:20+0000 localhost systemd[1]: network-ai-check.service: Deactivated successfully.
+2026-11-10T07:31:20+0000 localhost systemd[1]: Finished network-ai-check.service - Network AI analysis from Zabbix.
+2026-11-10T07:31:20+0000 localhost systemd[1]: network-ai-check.service: Consumed 1.951s CPU time.
+2026-11-10T07:32:35+0000 localhost systemd[1]: Starting network-ai-check.service - Network AI analysis from Zabbix...
+2026-11-10T07:32:36+0000 localhost python[1349]: NETWORK AI REPORT
+2026-11-10T07:32:36+0000 localhost python[1349]: Updated: 2026-11-10T07:32:36+00:00
+2026-11-10T07:32:36+0000 localhost python[1349]: --- R-HQ ---
+2026-11-10T07:32:36+0000 localhost python[1349]: Ping=1 | Loss=0.00% | RTT=0.671 ms
+2026-11-10T07:32:36+0000 localhost python[1349]: So mau lich su RTT hop le: 368
+2026-11-10T07:32:36+0000 localhost python[1349]: AI: RTT BINH THUONG | decision_score=0.0770
+2026-11-10T07:32:36+0000 localhost python[1349]: --- R-BR1 ---
+2026-11-10T07:32:36+0000 localhost python[1349]: Ping=1 | Loss=0.00% | RTT=1.963 ms
+2026-11-10T07:32:36+0000 localhost python[1349]: So mau lich su RTT hop le: 370
+2026-11-10T07:32:36+0000 localhost python[1349]: AI: NGHI NGO BAT THUONG RTT | decision_score=-0.0978
+2026-11-10T07:32:36+0000 localhost python[1349]: --- R-BR2 ---
+2026-11-10T07:32:36+0000 localhost python[1349]: Ping=1 | Loss=0.00% | RTT=1.829 ms
+2026-11-10T07:32:36+0000 localhost python[1349]: So mau lich su RTT hop le: 369
+2026-11-10T07:32:36+0000 localhost python[1349]: AI: NGHI NGO BAT THUONG RTT | decision_score=-0.1086
+2026-11-10T07:32:36+0000 localhost python[1349]: HQ: state=0
+2026-11-10T07:32:36+0000 localhost python[1349]: BR1: state=1
+2026-11-10T07:32:36+0000 localhost python[1349]: BR2: state=1
+2026-11-10T07:32:36+0000 localhost python[1349]: Response from "127.0.0.1:10051": "processed: 10; failed: 0; total: 10; seconds spent: 0.000898"
+2026-11-10T07:32:36+0000 localhost python[1349]: sent: 10; skipped: 0; total: 10
+2026-11-10T07:32:36+0000 localhost python[1349]: THANH CONG: DA GUI DU LIEU CHO CAC THE AI
+2026-11-10T07:32:36+0000 localhost systemd[1]: network-ai-check.service: Deactivated successfully.
+2026-11-10T07:32:36+0000 localhost systemd[1]: Finished network-ai-check.service - Network AI analysis from Zabbix.
+2026-11-10T07:32:36+0000 localhost systemd[1]: network-ai-check.service: Consumed 1.591s CPU time.
+2026-11-10T07:33:38+0000 localhost systemd[1]: Starting network-ai-check.service - Network AI analysis from Zabbix...
+2026-11-10T07:33:40+0000 localhost python[1364]: NETWORK AI REPORT
+2026-11-10T07:33:40+0000 localhost python[1364]: Updated: 2026-11-10T07:33:40+00:00
+2026-11-10T07:33:40+0000 localhost python[1364]: --- R-HQ ---
+2026-11-10T07:33:40+0000 localhost python[1364]: Ping=1 | Loss=0.00% | RTT=0.506 ms
+2026-11-10T07:33:40+0000 localhost python[1364]: So mau lich su RTT hop le: 369
+2026-11-10T07:33:40+0000 localhost python[1364]: AI: RTT BINH THUONG | decision_score=0.0425
+2026-11-10T07:33:40+0000 localhost python[1364]: --- R-BR1 ---
+2026-11-10T07:33:40+0000 localhost python[1364]: Ping=1 | Loss=0.00% | RTT=1.161 ms
+2026-11-10T07:33:40+0000 localhost python[1364]: So mau lich su RTT hop le: 372
+2026-11-10T07:33:40+0000 localhost python[1364]: AI: RTT BINH THUONG | decision_score=0.1361
+2026-11-10T07:33:40+0000 localhost python[1364]: --- R-BR2 ---
+2026-11-10T07:33:40+0000 localhost python[1364]: Ping=1 | Loss=0.00% | RTT=1.102 ms
+2026-11-10T07:33:40+0000 localhost python[1364]: So mau lich su RTT hop le: 371
+2026-11-10T07:33:40+0000 localhost python[1364]: AI: RTT BINH THUONG | decision_score=0.1067
+2026-11-10T07:33:40+0000 localhost python[1364]: HQ: state=0
+2026-11-10T07:33:40+0000 localhost python[1364]: BR1: state=0
+2026-11-10T07:33:40+0000 localhost python[1364]: BR2: state=0
+2026-11-10T07:33:40+0000 localhost python[1364]: Response from "127.0.0.1:10051": "processed: 10; failed: 0; total: 10; seconds spent: 0.000154"
+2026-11-10T07:33:40+0000 localhost python[1364]: sent: 10; skipped: 0; total: 10
+2026-11-10T07:33:40+0000 localhost python[1364]: THANH CONG: DA GUI DU LIEU CHO CAC THE AI
+2026-11-10T07:33:40+0000 localhost systemd[1]: network-ai-check.service: Deactivated successfully.
+2026-11-10T07:33:40+0000 localhost systemd[1]: Finished network-ai-check.service - Network AI analysis from Zabbix.
+2026-11-10T07:33:40+0000 localhost systemd[1]: network-ai-check.service: Consumed 1.581s CPU time.
+2026-11-10T07:34:58+0000 localhost systemd[1]: Starting network-ai-check.service - Network AI analysis from Zabbix...

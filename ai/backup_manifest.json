@@ -1,0 +1,55 @@
+{
+  "archive": "network-ai-backup-20261110-074327.tar.gz",
+  "compressed_bytes": 6718,
+  "tar_bytes": 51200,
+  "sha256": "9a47762f46a446d3ba62e8f2bd289961dc40994892c38a9e6ac82b9ba6eeeacf",
+  "gzip_crc_and_size": "passed",
+  "tar_headers": "passed",
+  "entries": [
+    {
+      "path": "systemd/network-ai-check.timer",
+      "size": 156,
+      "sha256": "5d704556a00deadf9b1df4ebc5993f21fcd39fa4de69c11536f6345f65a866dd"
+    },
+    {
+      "path": "systemd/network-ai-check.service",
+      "size": 260,
+      "sha256": "7a6705a674ef8790f789143a63c9677ba76eece87960eff61edce7ddcdd70c18"
+    },
+    {
+      "path": "systemd/network-ai-check.service.d/publish.conf",
+      "size": 122,
+      "sha256": "79b6285b0395e00cfceb04c56699d9ac5363d9330fac582363fb6eade0a34994"
+    },
+    {
+      "path": "source/ai_check.py",
+      "size": 3461,
+      "sha256": "37d4bf783a84ac5b34d80f2d557abae96fc79548ca8959bff085bed9dd5ae5de"
+    },
+    {
+      "path": "source/setup_ai_cards.py",
+      "size": 3413,
+      "sha256": "b5b5660453f26048b248373a6cf1d85c3db53dc9b1d01b00ac77cd0335a1b402"
+    },
+    {
+      "path": "source/publish_ai_cards.py",
+      "size": 3039,
+      "sha256": "e37664ccd3492e087926f1495c8ed33327278ff41d69b4126366a7e4e7cd72c2"
+    },
+    {
+      "path": "source/setup_login.py",
+      "size": 1187,
+      "sha256": "22dd4c5d5693ba6ce3d215022885d1a481a6a7479353c6eb09c72682f211eafc"
+    },
+    {
+      "path": "test-RTT-BR1.log",
+      "size": 24697,
+      "sha256": "d2dba9afd24e6b211ae40018ed9919094017734a3fd4651587a00fcc0bb1cbe3"
+    },
+    {
+      "path": "requirements.txt",
+      "size": 207,
+      "sha256": "891741e60511ae76348450c4e31655f93cc250a6999267b4777e21a35d2d269c"
+    }
+  ]
+}

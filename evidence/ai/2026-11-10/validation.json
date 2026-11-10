@@ -1,0 +1,8 @@
+{
+  "syntax_compiled_files": 4,
+  "isolated_parser_synthetic_cases": 8,
+  "isolated_parser_logged_router_cases": 36,
+  "completed_reports": 12,
+  "sender_successes": 12,
+  "runtime": "Python 3.12.14, offline; VM/API/sender not executed"
+}
