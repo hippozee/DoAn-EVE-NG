@@ -1,6 +1,6 @@
 # Kế hoạch kiểm thử và thu minh chứng
 
-Đây là kế hoạch, không phải bảng kết quả đã đạt. Snapshot route và một giá trị ping không thay thế phép thử có thời gian, điều kiện và log.
+Đây là kế hoạch kèm trạng thái minh chứng. T10, T12 và T15 đã có kết quả chức năng được liên kết trong bảng; các hàng còn chờ không được coi là đã đạt. Snapshot route và một giá trị ping không thay thế phép thử có thời gian, điều kiện và log.
 
 ## Chuẩn bị
 
@@ -26,10 +26,10 @@
 | T09 | AI đủ mẫu bình thường | Mỗi host đủ mẫu, có điểm mô hình, ghi tỷ lệ cảnh báo nhầm trên tập khỏe | Đã đủ mẫu/có score; chưa đo cảnh báo nhầm |
 | T10 | RTT tăng có kiểm soát | Gây độ trễ trên đúng đường Zabbix đo; lưu thời điểm, RTT và score trước/trong/sau | Đạt chức năng trong một lần thử BR1 ngày 10/11; xem [kết quả](tests/T10_RTT_BR1_2026-11-10.md), chưa đánh giá độ chính xác |
 | T11 | Mất gói | Gây loss có kiểm soát trên đường đo; kiểm tra nhánh quy tắc, không gọi là phát hiện ML | Chờ |
-| T12 | Mất kết nối | Ping mới bằng 0 và báo quy tắc mất kết nối; phân biệt lỗi thu thập | Chờ |
+| T12 | Mất kết nối | Ping mới bằng 0 và báo quy tắc mất kết nối; phân biệt lỗi thu thập | Đạt nhánh ICMP và chuỗi 0→3→0 trong một lần thử BR1 10/11; [kết quả](tests/T12_ICMP_BR1_2026-11-10.md), không phải phát hiện ML hoặc OSPF failover |
 | T13 | Dữ liệu cũ/API lỗi | Phải báo lỗi hoặc dữ liệu cũ, không hiển thị kết luận khỏe | Chờ |
 | T14 | Gửi báo cáo/dashboard | zabbix_sender nhận đủ một giá trị; widget có timestamp/nội dung mới | Đã xác nhận gửi thật và widget AI Network Analysis |
-| T15 | Tự khởi động | Sau reboot có timer và báo cáo mới; không nhập mật khẩu thủ công | Chưa kiểm thử reboot |
+| T15 | Tự khởi động | Sau reboot có timer và báo cáo mới; không nhập mật khẩu thủ công | Đạt chức năng sau một lần reboot SERVER-ZABBIX ngày 10/11; [kết quả và giới hạn](tests/T15_REBOOT_2026-11-10.md) |
 
 ## Lệnh đọc cấu hình và trạng thái
 

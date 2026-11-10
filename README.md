@@ -29,6 +29,8 @@ Mô phỏng mạng nhiều cơ sở trên EVE-NG, dùng Debian 12 + FRRouting đ
 
 Đã nhận [mã AI thực tế, units và requirements từ VM](ai/README.md), kèm [log T10 gốc và CSV trích xuất](evidence/ai/2026-11-10). Gói qua kiểm tra toàn vẹn; không chứa credentials.json. Đây là bản sao nguồn đã xuất, không phải kiểm tra trực tiếp trạng thái VM hiện tại.
 
+- Bổ sung kiểm tra cuối buổi: [T12 mất phản hồi ICMP BR1 và phục hồi](docs/tests/T12_ICMP_BR1_2026-11-10.md), [T15 AI tự chạy sau reboot SERVER-ZABBIX](docs/tests/T15_REBOOT_2026-11-10.md). Đã có kết quả chức năng theo ảnh; chưa đánh giá độ chính xác ML hoặc độ trễ phát hiện.
+
 ## Tệp hiện có
 
 | Nhóm | Nguồn |
@@ -46,6 +48,6 @@ Các snapshot không phải cấu hình lấy trực tiếp từ lab ngày 09/11
 
 ## Việc ưu tiên
 
-Đã sao lưu mã AI/units/requirements và log T10. Tiếp theo: chốt bố cục → lưu baseline cố định và xuất lịch sử ICMP có lastclock → đánh giá cảnh báo nhầm, thử loss/mất kết nối/dữ liệu cũ khi cần → bổ sung ảnh/CSV cho báo cáo và slide. T10 tăng RTT/phát hiện/phục hồi đã có kết quả chức năng.
+Đã sao lưu mã AI/units/requirements và log T10. Tiếp theo: chốt bố cục → lưu baseline cố định và xuất lịch sử ICMP có lastclock → đánh giá cảnh báo nhầm, thử loss một phần/dữ liệu cũ khi cần → bổ sung ảnh/CSV cho báo cáo và slide. T10 tăng RTT/phát hiện/phục hồi đã có kết quả chức năng.
 
 Chưa có số đo để tuyên bố độ chính xác AI, thời gian hội tụ, mức giảm băng thông hoặc hiệu quả QoS.

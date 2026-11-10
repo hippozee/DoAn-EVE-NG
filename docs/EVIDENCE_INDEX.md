@@ -63,3 +63,13 @@ Không biến các dòng log Finished thành bằng chứng độ chính xác AI
 Ví dụ đường dẫn dự kiến: evidence/YYYYMMDD/T10/run01_rtt_before.png, run01_rtt_during.png, run01_ai.log, run01_metrics.csv. Đây là đề xuất đặt tên, chưa phải tệp đã tồn tại.
 
 Mỗi ảnh cần caption: test/node/lệnh hoặc màn hình, thời điểm có múi giờ, điều ảnh chứng minh và nguồn gốc. Không đưa password/token/private key vào ảnh, code, Git hay slide. Nếu ảnh cắt mất Last value hoặc timestamp thì không dùng để khẳng định đã cập nhật.
+
+## Bổ sung kiểm thử cuối ngày 10/11
+
+| Nguồn | Phạm vi |
+|---|---|
+| [T12](tests/T12_ICMP_BR1_2026-11-10.md) | Bản ghi dựa ảnh: route/qdisc trước thử, bộ lọc ICMP đích BR1, drop counters, journal state 0→3→0; chưa có ảnh gốc hoặc raw T12 log trong repo |
+| [T12 CSV chép từ ảnh](../evidence/ai/2026-11-10/T12_states_transcribed.csv) | 10 lần in trạng thái BR1 trong cửa sổ 09:50–10:02 UTC; không phải 10 mẫu ICMP độc lập được xác minh |
+| [T15](tests/T15_REBOOT_2026-11-10.md) | Uptime/nhật ký sau reboot và timestamp mới trên ba thẻ; một lần reboot SERVER-ZABBIX, chưa reboot cả topology |
+
+Các ảnh có thể chứa phần ứng dụng khác ngoài lab; chỉ dùng phần liên quan sau khi kiểm tra và che thông tin không cần thiết. Không đưa nguyên ảnh nền trò chuyện/giao dịch vào repo hoặc báo cáo.
