@@ -24,7 +24,7 @@
 | T07 | Chính sách BR→HQ | Từ máy thuộc LAN chi nhánh, thử đúng dịch vụ cho phép/bị chặn; ghi firewall counters | Chờ ruleset và ma trận quyền |
 | T08 | QoS khi có tải | Hai luồng cạnh tranh có nhãn/DSCP rõ; đo throughput, RTT, loss trước/sau | Chờ cấu hình và kết quả đọc được |
 | T09 | AI đủ mẫu bình thường | Mỗi host đủ mẫu, có điểm mô hình, ghi tỷ lệ cảnh báo nhầm trên tập khỏe | Đã đủ mẫu/có score; chưa đo cảnh báo nhầm |
-| T10 | RTT tăng có kiểm soát | Gây độ trễ trên đúng đường Zabbix đo; lưu thời điểm, RTT và score trước/trong/sau | Chờ |
+| T10 | RTT tăng có kiểm soát | Gây độ trễ trên đúng đường Zabbix đo; lưu thời điểm, RTT và score trước/trong/sau | Đạt chức năng trong một lần thử BR1 ngày 10/11; xem [kết quả](tests/T10_RTT_BR1_2026-11-10.md), chưa đánh giá độ chính xác |
 | T11 | Mất gói | Gây loss có kiểm soát trên đường đo; kiểm tra nhánh quy tắc, không gọi là phát hiện ML | Chờ |
 | T12 | Mất kết nối | Ping mới bằng 0 và báo quy tắc mất kết nối; phân biệt lỗi thu thập | Chờ |
 | T13 | Dữ liệu cũ/API lỗi | Phải báo lỗi hoặc dữ liệu cũ, không hiển thị kết luận khỏe | Chờ |
