@@ -1,0 +1,15 @@
+BÁO CÁO ĐỒ ÁN EVE-NG
+
+Bao_cao_DATN_EVE_NG.docx: bản chỉnh sửa chính, dùng Times New Roman theo file mẫu.
+Bao_cao_DATN_EVE_NG.pdf: bản đọc nhanh 39 trang, font Liberation Serif; phân trang độc lập với Word.
+
+1. Điền các ô [HỌ TÊN], [MÃ SINH VIÊN], [LỚP], [NGÀNH], [MÃ NGÀNH], [KHOA], người hướng dẫn và ngày giao/nộp.
+2. Đối chiếu tên đề tài với bản được duyệt. Báo cáo dùng tên từ đề cương trong repo.
+3. Rà soát lời cam đoan, cảm ơn; thay tờ nhiệm vụ bằng bản chính thức.
+4. Trong Word nhấn Ctrl+A, F9 và chọn cập nhật toàn bộ mục lục. Nếu Word chưa cập nhật danh mục hình/bảng, bấm vào từng danh mục và Update Field.
+5. Các hình topology và pipeline là sơ đồ tái dựng; đồ thị T10 lấy từ CSV trích log, đồ thị T12 lấy từ dữ liệu chép ảnh. Chưa có ảnh dashboard gốc của các phép thử để chèn.
+6. Chưa có số đo độ chính xác AI, thời gian hội tụ OSPF, hiệu quả QoS hoặc nghiệm thu handshake WireGuard. Báo cáo ghi rõ các giới hạn này.
+
+Nguồn: https://github.com/hippozee/DoAn-EVE-NG
+Snapshot: 9956c6d36a9fa777e1caa2875a2956ea5c004146
+Mốc minh chứng: 10/11/2026.
