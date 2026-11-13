@@ -2,9 +2,9 @@
 
 Mô phỏng mạng nhiều cơ sở trên EVE-NG, dùng Debian 12 + FRRouting để định tuyến OSPF, kết nối BR1–BR2 qua giao diện WireGuard và giám sát bằng Zabbix. Phần AI thử nghiệm dùng Isolation Forest để phát hiện độ trễ khác thường.
 
-**Mốc tài liệu mới nhất: 10/11/2026, giờ Việt Nam.** Đây là hồ sơ phục vụ viết báo cáo và slide; cần đối chiếu trạng thái hiện hành trước khi kết luận nghiệm thu.
+**Mốc kiểm thử mới nhất: 13/11/2026, giờ Việt Nam.** Xem [biên bản kiểm thử](Bien_ban_kiem_thu_EVE_NG.md) để đối chiếu kết quả trên lab.
 
-**Đọc cập nhật mới nhất:** [Tiến độ 10/11 — thẻ AI, graph RTT và đồng bộ giờ](docs/PROGRESS_2026-11-10.md). Mốc này bổ sung và thay thế các trạng thái cũ tương ứng trong hồ sơ 09/11.
+**Đọc tiến độ ngày 10/11:** [Tiến độ 10/11 — thẻ AI, graph RTT và đồng bộ giờ](docs/PROGRESS_2026-11-10.md). Mốc này bổ sung và thay thế các trạng thái cũ tương ứng trong hồ sơ 09/11.
 
 ## Đọc trước khi tiếp tục bằng Codex
 
@@ -48,6 +48,6 @@ Các snapshot không phải cấu hình lấy trực tiếp từ lab ngày 09/11
 
 ## Việc ưu tiên
 
-Đã sao lưu mã AI/units/requirements và log T10. Tiếp theo: chốt bố cục → lưu baseline cố định và xuất lịch sử ICMP có lastclock → đánh giá cảnh báo nhầm, thử loss một phần/dữ liệu cũ khi cần → bổ sung ảnh/CSV cho báo cáo và slide. T10 tăng RTT/phát hiện/phục hồi đã có kết quả chức năng.
+Đã sao lưu mã AI/units/requirements và log T10. Phần bàn giao còn cần bản export của topology mở rộng, cấu hình khởi động tương ứng và minh chứng cho báo cáo, slide. Bản `.unl` liệt kê ở trên là bản đã lưu trong kho. Cần đối chiếu với topology đang chạy trước khi dùng để tái tạo lab.
 
-Chưa có số đo để tuyên bố độ chính xác AI, thời gian hội tụ, mức giảm băng thông hoặc hiệu quả QoS.
+Biên bản ngày 13/11 đã ghi nhận kết quả đo QoS theo chiều chi nhánh về HQ, kiểm tra chuyển tuyến khi ngắt riêng từng WAN chính và demo AI khi tăng RTT hoặc mất phản hồi ICMP. Thời gian hội tụ và độ chính xác của mô hình AI vẫn cần phép đo riêng.
